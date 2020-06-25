@@ -4,10 +4,13 @@ import {Link} from 'react-router-dom'
 class index extends Component {
     render() {
         return (
-           <ul>
+            <nav>
+                <ul>
                <li><Link to="/">Home</Link></li>
                <li><Link to="/profile">Profile</Link></li>
            </ul>
+            </nav>
+           
         );
     }
 }
