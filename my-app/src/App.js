@@ -12,12 +12,13 @@ export default class App extends React.Component {
     this.auth = new Auth(this.props.history);
   }
   render() {
-
+     //passing the auth object down to each component on props
     return (
       <>
         <Nav />
         <div className="body">
-          <Route path="/" exact component={Home} />
+         
+          <Route path="/" exact render={props => <Home auth={this.auth}{...props} />} />
           <Route path="/profile" exact component={Profile} />
         </div>
 
